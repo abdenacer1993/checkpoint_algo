@@ -1,0 +1,10 @@
+var init_var=010509;
+init_var_mod=init_var%100;
+init_var_No_Mod=init_var-init_var_mod;
+thouthands =init_var_No_Mod/100;
+thouthands_TENS=thouthands%100;
+thouthands_Handred=thouthands-thouthands_TENS
+thouthands_Handred2=thouthands_Handred/100;
+console.log(init_var_mod);
+console.log(thouthands_TENS);
+console.log(thouthands_Handred2);

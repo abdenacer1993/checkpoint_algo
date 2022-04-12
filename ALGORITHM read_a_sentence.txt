@@ -1,0 +1,34 @@
+ALGORITHM read_a_sentence
+var 
+ch:String;
+i,j,k,nbr_c,nbr_w,nbr_v:Integer;
+
+Begin
+    
+    //se termine par " . "
+    while (LENGHT(ch)="." ) do
+        read(ch);
+
+        // nombre des caracteres 
+        for i FROM 1 TO LENGTH(ch) do
+        nbr_c := LENGTH(ch);
+        END_for
+
+        // nomdre des mots
+        for j FROM 1 TO LENGTH(ch) do
+            if (LENGTH(ch[j])=" ") then
+                nbr_w := nbr_w + 1 ;
+            END_if
+        END_for
+
+        // nombre des voyelles
+        for k FROM 1 TO LENGTH(ch) do
+            if (LENGTH(ch[k]) IN ["a", "e","i" ,"o", "u", "y"]) then
+                nbr_v := nbr_v + 1 ;
+            END_if
+        END_for
+    END_while
+    Write("nombre des caracteres est :" nbr_c);
+    Write("nombre des mots est :" nbr_w);
+    Write("nombre des voyelles est :" nbr_v);
+END.

@@ -1,0 +1,24 @@
+ALGORITHM read_a_sentence
+VAR
+    c:CHAR:="";
+    ch:STRING:="";
+    nbr_word:INTEGER:=1;
+    nbc_car:INTEGER:=0;
+    nbr_voy:INTEGER:=0;
+BEGIN
+    WHILE (c!=".") DO
+        read(c);
+        nbr_car:=nbr_car+1;
+        ch:=ch+c;
+        IF (c=" ") THEN
+            nbr_word:=nbr_word+1;
+        END_IF
+        //"e","i" ,"o", "u", "y"
+        IF (c="A" OR c="a" OR c="E" OR c="e" OR c="I" OR c="i" OR c="O" OR c="o" OR c="U" OR c="u" OR c="Y" OR c="y") THEN
+            nbr_voy:=nbr_voy+1;
+        END_IF
+    END_WHILE
+    Write("nombre des caracteres est :" nbr_car);
+    Write("nombre des mots est :" nbr_word);
+    Write("nombre des voyelles est :" nbr_voy);
+END
