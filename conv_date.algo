@@ -1,10 +1,51 @@
-var init_var=010509;
-init_var_mod=init_var%100;
-init_var_No_Mod=init_var-init_var_mod;
+
+var init_var=160793;
+ 
+annee=init_var%100;
+init_var_No_Mod=init_var-annee;
 thouthands =init_var_No_Mod/100;
-thouthands_TENS=thouthands%100;
-thouthands_Handred=thouthands-thouthands_TENS
-thouthands_Handred2=thouthands_Handred/100;
-console.log(init_var_mod);
-console.log(thouthands_TENS);
-console.log(thouthands_Handred2);
+mois=thouthands%100;
+
+thouthands_Handred=thouthands-mois
+jour=thouthands_Handred/100;
+console.log(jour);
+switch (mois) {
+    case 1:
+    console.log('Janvier');
+    break;
+    case 2:
+    console.log('février');
+    break;
+    case 3:
+    console.log('Mars');
+    break;
+    case 4:
+    console.log('Avril');
+    break;
+    case 5:
+    console.log('May');
+    break;
+    case 6:
+    console.log('Juin');
+    break;
+    case 7:
+    console.log('Juillet');
+    break;
+    case 8:
+    console.log('Aout');
+    break;
+    case 9:
+    console.log('Septembre');
+    break;
+    case 10:
+    console.log('October');
+    break;
+    case 11:
+    console.log('Novembre');
+    break;
+    case 12:
+    console.log('Decembre');
+    break;
+
+}
+console.log(annee);
